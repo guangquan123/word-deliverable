@@ -775,7 +775,7 @@ def build_cover(document, spec):
     r = p.add_run(spec.get("project_name", ""))
     _set_run_font(r, FONT_HEI, 36, bold=True)
 
-    # 文档名称（字间加空格美化，复刻样板"需 求 调 研 大 纲"）
+    # 文档名称（≤12 字时字间加空格美化）
     # doc_name 优先；未设则回退到 document_title（从 Markdown 首 # 识别的文档标题）
     doc_name = spec.get("doc_name") or spec.get("document_title") or "未命名文档"
     spaced_name = " ".join(doc_name) if len(doc_name) <= 12 else doc_name
