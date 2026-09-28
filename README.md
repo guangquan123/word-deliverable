@@ -86,4 +86,4 @@ python scripts/render_pdf.py output.docx output.pdf spec.json
 
 ## 许可
 
-暂未添加开源许可文件。
+[MIT](LICENSE)
